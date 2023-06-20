@@ -44,7 +44,7 @@ def validate_xml():
 # Create the GUI
 root = tk.Tk()
 root.title("XML Validation")
-root.geometry("400x150")
+root.geometry("600x350") #big window
 
 # XML File Label and Entry
 xml_file_label = tk.Label(root, text="XML File:")
