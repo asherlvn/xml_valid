@@ -1,3 +1,4 @@
+#ver 1.0
 #this project helps the team to get good xml and xsd files
 import tkinter as tk
 from tkinter import filedialog
