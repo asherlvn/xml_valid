@@ -6,6 +6,19 @@ from tkinter import messagebox
 
 import lxml.etree as ET
 
+def create_message_file(message, output_file):
+    with open(output_file, 'w') as file:
+        file.write(message)
+
+    # Message content
+   # message_content = """xml is valid"""
+
+    # Output file path
+    #output_file_path = 'C:/Users/Owner/message.txt'
+
+    # Create message file
+   # create_message_file(message_content, output_file_path)
+
 
 def select_xml_file():
     xml_file_path = filedialog.askopenfilename(filetypes=[("XML Files", "*.xml")])
@@ -34,6 +47,9 @@ def validate_xml():
 
         if xml_schema.validate(xml_tree):
             messagebox.showinfo("Validation Result", "XML file is valid against the XSD file.")
+            message_content = """xml is valid"""
+            output_file_path = 'C:/Users/Owner/message.txt'
+            create_message_file(message_content, output_file_path) # create_message_file
         else:
             messagebox.showwarning("Validation Result", "XML file is not valid against the XSD file.")
     except ET.XMLSyntaxError as e:
